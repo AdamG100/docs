@@ -13,10 +13,21 @@ To use the mcjarfiles.com API, send HTTP GET requests to the endpoints listed be
 
 The API supports different Minecraft server types, each with specific variants:
 
-| Type     | Variants                              | Description |
-| -------- | ------------------------------------- | -----------
-| **Vanilla** | `release`, `snapshot` | Official Minecraft server versions |
-| **Servers** | `paper`, `purpur` | Performance-optimized server software |
-| **Modded**  | `fabric`, `forge`, `neoforge` | Frameworks for modded Minecraft servers |
-| **Bedrock** | `latest`, `preview` | Bedrock edition server versions |
-| **Proxies** | `velocity` | Proxy server software for network management |
+| Type        | Variants                      | Description                                  |
+| ----------- | ----------------------------- | -------------------------------------------- |
+| **Vanilla** | `release`, `snapshot`         | Official Minecraft server versions           |
+| **Servers** | `paper`, `purpur`             | Performance-optimized server software        |
+| **Modded**  | `fabric`, `forge`, `neoforge` | Frameworks for modded Minecraft servers      |
+| **Bedrock** | `latest`, `preview`           | Bedrock edition server versions              |
+| **Proxies** | `velocity`                    | Proxy server software for network management |
+
+## Endpoints Overview
+
+The API offers four main endpoints to interact with Minecraft server data:
+
+| Endpoint            | Description                                               | Example Use Case                              |
+| ------------------- | --------------------------------------------------------- | --------------------------------------------- |
+| `/get-jar`          | Download a specific JAR file for a given type and variant | Automate server setup with a specific version |
+| `/get-latest-jar`   | Download the latest JAR file for a type and variant       | Quickly grab the newest Paper server JAR      |
+| `/get-version-info` | Retrieve metadata for a specific version                  | Check compatibility or release details        |
+| `/get-versions`     | List all available versions for a type and variant        | Display all available versions                |
